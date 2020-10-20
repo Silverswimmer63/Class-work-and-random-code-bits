@@ -1,7 +1,8 @@
 /*--------------- Preset output before we edit anything start ----------------*/
 
 var output = "JavaScript Loading";
-document.getElementById("output").innerHTML = output;
+document.getElementById("feedback").innerHTML = output;
+//inner html = everything between the <tag></tag>
 
 /*------------ preset output before we edit end should read "JavaScript Loading"
 if this does not show up, and your expected result does not happen, then you
@@ -23,6 +24,6 @@ if (Array.isArray(output)) {
 
 if (styledOutput.length != 0) { output = styledOutput; }
 
-document.getElementById("output").innerHTML = output;
+document.getElementById("feedback").innerHTML = output;
 
 /* ------------------------------- End of File -------------------------------*/
