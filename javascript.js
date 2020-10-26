@@ -8,6 +8,20 @@ document.getElementById("feedback").innerHTML = output;
 if this does not show up, and your expected result does not happen, then you
 have an issue bellow. --------------------------------------------------------*/
 
+/*output = [];
+var arrOne = [1,2,3,4,5];
+output.push(arrOne.pop());
+output.push(arrOne.pop());
+output.push(arrOne.pop());
+output.push(arrOne.pop());
+output.push(arrOne.pop());
+//output = arrOne.reverse();
+*/
+
+
+var arrTwo = ["I" + "desire" + "to" + "be" + "a" + "sentence."];
+output = arrTwo.join(" ");
+
 
 
 /*----------------------------------------- Do not make changes below this line
