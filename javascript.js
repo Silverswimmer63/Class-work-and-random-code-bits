@@ -18,11 +18,16 @@ output.push(arrOne.pop());
 //output = arrOne.reverse();
 */
 
-
+/*
 var arrTwo = ["I" + "desire" + "to" + "be" + "a" + "sentence."];
 output = arrTwo.join(" ");
+*/
 
-
+/*
+var strOne = "I really wish I were an array";
+output = strOne.split(" ");
+console.log(output);
+*/
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
