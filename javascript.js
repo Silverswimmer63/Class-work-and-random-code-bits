@@ -8,7 +8,7 @@ document.getElementById("feedback").innerHTML = output;
 if this does not show up, and your expected result does not happen, then you
 have an issue bellow. --------------------------------------------------------*/
 
-var euanTrivia = [{statment: "The sky is yellow", value: false}, {statment: "Memphis is tall", value: false}, {statment: "Euan is bigbrain", value: false}, {statment: "Euan drives a van", value: true}, {statment: "Magenta is the best color", value: true}, {statment: "Disney ruined Star Wars", value: true}, {statment: "Minecraft is the GOAT", value: true}, {statment: "Fortnight is trash", value: true}, {statment: "Aidan can drive", value: false}, {statment: "Zoom is a great learning platform: ", value: false}]
+
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
