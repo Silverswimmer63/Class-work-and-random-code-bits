@@ -1,17 +1,7 @@
 body {
     background-color: #f0f0f2;
-    margin: 0;
-    padding: 0;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-}
-.oone {
-    width: 600px;
-    margin: 5em auto;
-    padding: 2em;
-    background-color: #fdfdff;
-    border-radius: 0.5em;
-    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 }
 a:link, a:visited {
     color: #38488f;
@@ -23,45 +13,44 @@ a:link, a:visited {
         width: auto;
     }
 }
-
-#true {
-  background-color: rgb(220,220,220);
-     border-style: double;
-     border-color: black;
-     border-radius: 10px;
-    position: absolute;
-    margin-left: 10px;
-    top: 55%;
-    left: 45%;
-    transform: translate(-49%, -150px);
-    width: 290px;
-    white-space: normal;
+.true{
+ transform: translate(330px, 10px);
+ background-color: rgb(63, 191, 63);
 }
-
-#false {
-  background-color: rgb(220,220,220);
-     border-style: double;
-     border-color: black;
-     border-radius: 10px;
-    position: absolute;
-    margin-left: 10px;
-    top: 55%;
-    left: 45%;
-    transform: translate(-49%, -150px);
-    width: 290px;
-    white-space: normal;
+.false{
+ transform: translate(10px, -44px);
+ background-color: rgb(191, 63, 63);
 }
-
-.score {
-  background-color: rgb(220,220,220);
-     border-style: double;
-     border-color: black;
-     border-radius: 10px;
-    position: absolute;
-    margin-left: 10px;
-    top: 55%;
-    left: 45%;
-    transform: translate(-49%, -150px);
-    width: 290px;
-    white-space: normal;
+.reset{
+ transform: translate(170px, -98px);
+ background-color: rgb(191, 191, 63);
+}
+ .ultdiv{
+   background-color: rgb(220,220,220);
+   border-style: double;
+   border-color: black;
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  transform: translate(-49%, -150px);
+  width: 420px;
+  height: 80px;
+  -webkit-animation: box 6s infinite 0.5s;
+  white-space: normal;
+ }
+.ultdiv button{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  white-space: nowrap;
+  color: white;
+  border-style: outset;
+  border-width: thick;
+padding: 10px 23px;
+}
+.ultdiv button:hover{
+  white-space: nowrap;
+background-color: rgb(100,125,195);
+}
+.ultdiv button:active{
+border-style: inset;
 }
