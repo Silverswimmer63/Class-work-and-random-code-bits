@@ -24,7 +24,21 @@ a:link, a:visited {
     }
 }
 
-button {
+#true {
+  background-color: rgb(220,220,220);
+     border-style: double;
+     border-color: black;
+     border-radius: 10px;
+    position: absolute;
+    margin-left: 10px;
+    top: 55%;
+    left: 45%;
+    transform: translate(-49%, -150px);
+    width: 290px;
+    white-space: normal;
+}
+
+#false {
   background-color: rgb(220,220,220);
      border-style: double;
      border-color: black;
