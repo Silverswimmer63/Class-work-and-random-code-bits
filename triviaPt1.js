@@ -17,4 +17,3 @@ return splicedstuff; // returning the finished product
 function makeComplex(list, maxlen = 5) {
 
 }
-//boi
