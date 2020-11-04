@@ -6,7 +6,7 @@ function makeComplex(list, maxLen = 5) {
           var oneFourthChance = [1,2,3,4];
           var doNot = false;
           for (var p = 0; p < 100; p++) {
-              var randMaths = Math.floor(Math.random()4);
+              var randMaths = Math.floor(Math.random()*4);
             //code
           }
                   if (oneFourthChance[randMaths] == 4) {
