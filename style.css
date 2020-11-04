@@ -13,17 +13,39 @@ a:link, a:visited {
         width: auto;
     }
 }
+.score{
+      margin-top: 1%;
+  margin-bottom: 1%;
+  white-space: nowrap;
+  color: white;
+  border-style: outset;
+  border-color: grey;
+  border-width: thick;
+background-color: rgb(100,76,195);
+padding: 10px 23px;
+  width: 40px;
+  height: 15px;
+font-size: 10px;
+transform: translate(160px,14px)
+
+}
 .true{
- transform: translate(330px, 10px);
- background-color: rgb(63, 191, 63);
+ transform: translate(330px, -40px)
 }
 .false{
- transform: translate(10px, -44px);
- background-color: rgb(191, 63, 63);
+ transform: translate(-70px, -40px)
 }
 .reset{
- transform: translate(170px, -98px);
- background-color: rgb(191, 191, 63);
+ transform: translate(167px, -35px)
+}
+.display{
+   background-color: rgb(220,220,220);
+   border-style: double;
+   border-color: black;
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  transform: translate(-210px, -200px);
 }
  .ultdiv{
    background-color: rgb(220,220,220);
@@ -34,7 +56,7 @@ a:link, a:visited {
   left: 45%;
   transform: translate(-49%, -150px);
   width: 420px;
-  height: 80px;
+  height: 130px;
   -webkit-animation: box 6s infinite 0.5s;
   white-space: normal;
  }
@@ -45,11 +67,12 @@ a:link, a:visited {
   color: white;
   border-style: outset;
   border-width: thick;
+background-color: rgb(100,76,195);
 padding: 10px 23px;
 }
 .ultdiv button:hover{
   white-space: nowrap;
-background-color: rgb(63,63,191);
+background-color: rgb(100,125,195);
 }
 .ultdiv button:active{
 border-style: inset;
