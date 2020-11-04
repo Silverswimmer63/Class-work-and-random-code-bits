@@ -30,13 +30,13 @@ transform: translate(160px,14px)
 
 }
 .true{
- transform: translate(330px, -40px)
+ transform: translate(330px, -40px)   
 }
 .false{
- transform: translate(-70px, -40px)
+ transform: translate(-70px, -40px)   
 }
 .reset{
- transform: translate(167px, -35px)
+ transform: translate(167px, -35px)   
 }
 .display{
    background-color: rgb(220,220,220);

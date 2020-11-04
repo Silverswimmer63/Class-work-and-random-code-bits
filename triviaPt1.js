@@ -1,10 +1,32 @@
-var euanTrivia = [{statment: "The sky is yellow", value: false}, {statment: "Memphis is tall", value: false}, {statment: "Euan is bigbrain", value: false}, {statment: "Euan drives a van", value: true}, {statment: "Magenta is the best color", value: true}, {statment: "Disney ruined Star Wars", value: true}, {statment: "Minecraft is the GOAT", value: true}, {statment: "Fortnight is trash", value: true}, {statment: "Aidan can drive", value: false}, {statment: "Zoom is a great learning platform: ", value: false}]
+/*
+ Memphis: 
+Aidan doesn’t take physics but acts like he does: T  
+Global warming is a lie: F
+Bethesda made the biggest flop in gaming history:T
+PC isn’t master race: F
+Aidan calls any sport with a ball in it sports ball:T
+Aidan thinks PC isn’t master race:F
+Aidan is Extreme big brain:F
+Komoto best code editor:T
+Windows 10 is good:F
+ Euan hates on Komoto because why not:T
+ */
+var myStatments = [{statement: "Aidan doesn't take physics but acts like he does", value: true},
+                   {statement: "Global warming is a lie", value: false},
+                   {statement: "Bethesda made the biggest flop in gaming history", value: true},
+                   {statement: "PC isn't master race", value: false},
+                   {statement: "Aidan calls any sport with a ball in it sports ball", value: true},
+                   {statement: "Aidan is Extreme big brain", value: false},
+                   {statement: "Komoto best code editor", value: true},
+                   {statement: "Windows 10 is good", value: false},
+                   {statement: "Euan hates on Komoto because why not", value: true},
+                   {statement: "Aidan thinks PC isn't master race", value: false}];
 
 function randomList(lists, length) { //function name with designated perameter
   var itter = length;
   var list = [];
   for (var j = 0; j < itter; j ++ ) {
-           list.push(j);
+           list.push(j);        
   }
   var splicedstuff = [];
   var index = list.length;
@@ -14,7 +36,7 @@ function randomList(lists, length) { //function name with designated perameter
     var state = lists[newList[0]]
     splicedstuff.push(state);
   }
-
+  
 return splicedstuff;
 }
 
