@@ -1,6 +1,6 @@
 /*
- Memphis: 
-Aidan doesn’t take physics but acts like he does: T  
+ Memphis:
+Aidan doesn’t take physics but acts like he does: T
 Global warming is a lie: F
 Bethesda made the biggest flop in gaming history:T
 PC isn’t master race: F
@@ -23,21 +23,21 @@ var myStatments = [{statement: "Aidan doesn't take physics but acts like he does
                    {statement: "Aidan thinks PC isn't master race", value: false}];
 
 function randomList(lists, length) { //function name with designated perameter
-  var itter = length;
-  var list = [];
-  for (var j = 0; j < itter; j ++ ) {
-           list.push(j);        
+  var itter = length; // create a variable to work with the raw imput
+  var list = []; // make a blank array to store things in
+  for (var j = 0; j < itter; j ++ ) { // loop to put the parts of the initial value in the blank variable
+           list.push(j); // add the parts of itter to list
   }
-  var splicedstuff = [];
-  var index = list.length;
-  for (var i = 0; i < index; i++) {
-    var randmtah = Math.floor(Math.random() * (list.length));
-    var newList = list.splice(randmtah,1);
-    var state = lists[newList[0]]
-    splicedstuff.push(state);
+  var splicedstuff = []; // new array to store the spliced stuff
+  var index = list.length; // make a variable to get the length of list
+  for (var i = 0; i < index; i++) { // loop to splice things with
+    var randmtah = Math.floor(Math.random() * (list.length)); // getting a random index to move arround
+    var newList = list.splice(randmtah,1); // splicing a the just found spot
+    var state = lists[newList[0]] // adding the spliced item to the begining of an array
+    splicedstuff.push(state); // adding the spliced thongs to a blank array
   }
-  
-return splicedstuff;
+
+return splicedstuff; // returning the finished product
 }
 
 function makeAnd(first, second) {
@@ -51,6 +51,7 @@ function makeAnd(first, second) {
       return statementNew;
     }
 }
+
 function makeOr(first, second) {
     var statementNew = {statement:first.statement + " or " + second.statement,bool:false};
     if (first.bool || second.bool) {
@@ -61,43 +62,45 @@ function makeOr(first, second) {
       return statementNew;
     }
 }
+
 function makeNot(object) {
     var statementNew = {statement:"",bool:!object.bool};
     statementNew.statement += "It is not the case that, " + object.statement;
     return statementNew;
 }
-function makeComplex(list, maxLen = 5) {
-  for (var k = 0; k < list.length;k++) {
-        var randMath = Math.floor(Math.random()*4)+1;
-      var itter = 0;
-        while (itter < randMath) {
-          var oneFourthChance = [1,2,3,4];
-          var doNot = false;
-          for (var p = 0; p < 100; p++) {
-              var randMaths = Math.floor(Math.random()*4);
-            //code
-          }
-                  if (oneFourthChance[randMaths] == 4) {
-                      doNot = true;
-                  }else{
-                   doNot = false;
-                  }
-          if (doNot === true) {
-            list[k] = makeNot(list[k]);
-          }
-          var oneOrtwo = ["one", "two"];
-            var pickRand = Math.floor(Math.random()*2);
-            var pickLocate = Math.floor(Math.random()*list.length);
-                //code
-          if (oneOrtwo[pickRand] == "one" ) {
-            //code
-            list[k] = makeAnd(list[k], list[pickLocate]);
-          }else if (oneOrtwo[pickRand] == "two") {
-            //code
-            list[k] = makeOr(list[k], list[pickLocate]);
-          }
-          itter++;
+
+function makeComplex(list, maxLen = 5) { // make the function that takes the list of statments and makes a max length of 5
+  for (var k = 0; k < list.length;k++) { // begin a loop to creat the final statment
+      var randMath = Math.floor(Math.random()*4)+1; // create a random number that is the number of statments in the final sentince
+      var itter = 0; // make a variable to track the number of statments in the final sentince
+      while (itter < randMath) { // check to see if we can add another statment baised on the random number that was generated in randMath
+        var oneFourthChance = [1,2,3,4]; // create a var to add the 25% chance of neggation
+        var doNot = false; // make a var that tracks wether or not the negation will happen, false by default
+        for (var p = 0; p < 100; p++) { // begin a loop to get a random number to see if the 25% chance of negation happens
+            var randMaths = Math.floor(Math.random()*4); // creates the 25% chance of the neagation
+          //code
         }
+        if (oneFourthChance[randMaths] == 4) { // checks the chance of negation
+          doNot = true; // if it happens, set the negaton tracker to true
+        }else{
+          doNot = false; // if no, leave the netation tracker as false
+        }
+        if (doNot === true) { // if the nagation happens, add the negation using makeNot
+          list[k] = makeNot(list[k]);
+        }
+        var oneOrtwo = ["one", "two"]; // Make a var to pick from at random with a 50% chance
+        var pickRand = Math.floor(Math.random()*2); // Make a var that hoses randomly between two options with equal chance of either
+        var pickLocate = Math.floor(Math.random()*list.length); //
+        // do an if for the choses function and the not chosen function
+        if (oneOrtwo[pickRand] == "one" ) {
+          //code
+          list[k] = makeAnd(list[k], list[pickLocate]);
+        }else if (oneOrtwo[pickRand] == "two") {
+          //code
+          list[k] = makeOr(list[k], list[pickLocate]);
+        }
+        itter++; // progress forward int the for loop towards the max length
+      }
   }
-        return list;
+  return list; // end the functiooooooon
 }

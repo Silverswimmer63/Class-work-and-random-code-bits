@@ -30,13 +30,16 @@ transform: translate(160px,14px)
 
 }
 .true{
- transform: translate(330px, -40px)   
+ transform: translate(330px, -40px);
+ background-color: rgb(63, 191, 63);
 }
 .false{
- transform: translate(-70px, -40px)   
+ transform: translate(-70px, -40px);
+ background-color: rgb(191, 63, 63);
 }
 .reset{
- transform: translate(167px, -35px)   
+ transform: translate(167px, -35px);
+ background-color: rgb(191, 191, 63);
 }
 .display{
    background-color: rgb(220,220,220);
@@ -67,12 +70,11 @@ transform: translate(160px,14px)
   color: white;
   border-style: outset;
   border-width: thick;
-background-color: rgb(100,76,195);
 padding: 10px 23px;
 }
 .ultdiv button:hover{
   white-space: nowrap;
-background-color: rgb(100,125,195);
+background-color: rgb(63,63,191);
 }
 .ultdiv button:active{
 border-style: inset;
