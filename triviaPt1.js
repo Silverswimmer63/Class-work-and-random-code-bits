@@ -69,18 +69,17 @@ function makeNot(object) {
     return statementNew;
 }
 
-function makeComplex(list, maxLen = 5) { // make the function that takes the list of statments and makes a max length of 5
-  for (var k = 0; k < list.length;k++) { // begin a loop to creat the final statment
-      var randMath = Math.floor(Math.random()*4)+1; // create a random number that is the number of statments in the final sentince
+function makeComplex(list, maxLen = 5) { // make the function that takes the list of statments and makes a sentince with a max length of 5
+  for (var k = 0; k < list.length;k++) { // begin a loop to create the final statment
+      var randMath = Math.floor(Math.random()*4)+1; // create a random number generator that outputs a number between 1 and 4 to decide the number of statments in a sentince
       var itter = 0; // make a variable to track the number of statments in the final sentince
       while (itter < randMath) { // check to see if we can add another statment baised on the random number that was generated in randMath
         var oneFourthChance = [1,2,3,4]; // create a var to add the 25% chance of neggation
         var doNot = false; // make a var that tracks wether or not the negation will happen, false by default
-        for (var p = 0; p < 100; p++) { // begin a loop to get a random number to see if the 25% chance of negation happens
+        for (var p = 0; p < 100; p++) { // begin a loop to check the activation of the negation
             var randMaths = Math.floor(Math.random()*4); // creates the 25% chance of the neagation
-          //code
         }
-        if (oneFourthChance[randMaths] == 4) { // checks the chance of negation
+        if (oneFourthChance[randMaths] == 4) { // checks if the negation happened
           doNot = true; // if it happens, set the negaton tracker to true
         }else{
           doNot = false; // if no, leave the netation tracker as false
@@ -88,10 +87,10 @@ function makeComplex(list, maxLen = 5) { // make the function that takes the lis
         if (doNot === true) { // if the nagation happens, add the negation using makeNot
           list[k] = makeNot(list[k]);
         }
-        var oneOrtwo = ["one", "two"]; // Make a var to pick from at random with a 50% chance
-        var pickRand = Math.floor(Math.random()*2); // Make a var that hoses randomly between two options with equal chance of either
-        var pickLocate = Math.floor(Math.random()*list.length); //
-        // do an if for the choses function and the not chosen function
+        var oneOrtwo = ["one", "two"]; // Make an array with two items
+        var pickRand = Math.floor(Math.random()*2); // randomly chose one of the two items from above
+        var pickLocate = Math.floor(Math.random()*list.length); // randomly chose a location in the list to add the and/or
+        // create an if statment for makeAnd and makeOr and add to list the statment
         if (oneOrtwo[pickRand] == "one" ) {
           //code
           list[k] = makeAnd(list[k], list[pickLocate]);
@@ -99,7 +98,7 @@ function makeComplex(list, maxLen = 5) { // make the function that takes the lis
           //code
           list[k] = makeOr(list[k], list[pickLocate]);
         }
-        itter++; // progress forward int the for loop towards the max length
+        itter++; // progress forward in the for loop towards the max length
       }
   }
   return list; // end the functiooooooon
