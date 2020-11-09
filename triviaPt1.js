@@ -167,3 +167,4 @@ keys.addEventListener('click', e => {
     scoreD.textContent = "Score : " + score;
   }
 })
+//hek
