@@ -1,6 +1,6 @@
 /*
- Memphis:
-Aidan doesn’t take physics but acts like he does: T
+ Memphis: 
+Aidan doesn’t take physics but acts like he does: T  
 Global warming is a lie: F
 Bethesda made the biggest flop in gaming history:T
 PC isn’t master race: F
@@ -35,7 +35,7 @@ function randomList(lists, length) { //function name with designated perameter
   var itter = length;
   var list = [];
   for (var j = 0; j < itter; j ++ ) {
-           list.push(j);
+           list.push(j);        
   }
   var splicedstuff = [];
   var index = list.length;
@@ -51,7 +51,7 @@ function randomList(lists, length) { //function name with designated perameter
     var state = lists[newList[0]];
     splicedstuff.push(state);
   }
-
+  
 return splicedstuff;
 }
 
@@ -70,7 +70,7 @@ function makeOr(first, second) {
     var statementNew = {statement:first.statement + " or " + second.statement,bool:false};
     if (first.bool || second.bool) {
       console.log(first)
-
+      
       console.log(second)
         statementNew.bool = true;
         return statementNew;
@@ -108,7 +108,7 @@ function makeComplex(list, maxLen = 5) {
             list[k] = makeNot(list[k]);
             doNotit++;
           }
-
+          
           var oneOrtwo = ["one", "two"];
             var pickRand = Math.floor(Math.random()*2);
             var pickLocate = Math.floor(Math.random()*list.length);
@@ -125,7 +125,6 @@ function makeComplex(list, maxLen = 5) {
   }
         return list;
 }
-
 var statements = randomList(myStatments, myStatments.length);
 var stateArr = makeComplex(statements);
 var indexS = 0;
@@ -155,11 +154,11 @@ keys.addEventListener('click', e => {
         statements = randomList(myStatments, myStatments.length);
         stateArr = makeComplex(statements);
 
-      }
+      } 
     }
     if (action === "false") {
       if (stateArr[indexS].bool === false) {
-        score+=5;
+        score+=5; 
       }
       else{
         score-=5;
@@ -171,7 +170,7 @@ keys.addEventListener('click', e => {
         statements = randomList(myStatments, myStatments.length);
         stateArr = makeComplex(statements);
 
-      }
+      } 
 
     }
     scoreD.textContent = "Score : " + score;
