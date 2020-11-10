@@ -7,7 +7,21 @@ document.getElementById("output").innerHTML = output;
 if this does not show up, and your expected result does not happen, then you
 have an issue bellow. --------------------------------------------------------*/
 
-
+function randList(arr){
+  var index = [];
+  for (var i = 0; i < arr.length; i++) {
+    index.push(i);
+  }
+  var retIndex = [];
+  var start = index.length;
+  while (start > 0) {
+    var remove = Math.random() * start;
+    remove = Math.floor(remove);
+    retIndex.push(index.splice(remove, 1)[0]);
+    start --;
+  }
+  return retIndex;
+}
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
@@ -39,7 +53,7 @@ function backwardsArray(array) {
   console.log(output);
 }
   }
-  
+
   class Student{
 	constructor(name, age, year, major){
     this.name = name;
@@ -59,10 +73,3 @@ function changesIn(objOne, objTwo) {
   var changeInY = objTwo.y-objOne.y;
   return {x:changeInX,y:changeInY}
 }
-
-
-
-
-
-
-

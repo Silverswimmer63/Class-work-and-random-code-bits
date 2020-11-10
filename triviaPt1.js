@@ -16,7 +16,6 @@ var checkedBox = 0.0;
 
 const display = document.querySelector('.display');
 const scoreD = document.querySelector('.score');
-console.log(display.textContent)
 var dochandeler = document.getElementById("textbox");
 
 
@@ -69,9 +68,6 @@ function makeAnd(first, second) {
 function makeOr(first, second) {
     var statementNew = {statement:first.statement + " or " + second.statement,bool:false};
     if (first.bool || second.bool) {
-      console.log(first)
-      
-      console.log(second)
         statementNew.bool = true;
         return statementNew;
     }
@@ -86,11 +82,13 @@ function makeNot(object) {
 }
 function makeComplex(list, maxLen = 5) {
             var doNotit = 0;
-  for (var k = 0; k < list.length;k++) {
+            var startRand = Math.floor(Math.random()*list.length)
+        var start = list[startRand];
         var randMath = Math.floor(Math.random()*5);
         if (randMath == 0) {
             randMath+=1;
         }
+                console.log(randMath)
       var itter = 0;
         while (itter < randMath) {
           var oneFourthChance = [1,2,3,4];
@@ -105,7 +103,7 @@ function makeComplex(list, maxLen = 5) {
                    doNot = false;
                   }
           if (doNot === true && doNotit == 0) {
-            list[k] = makeNot(list[k]);
+            start = makeNot(start);
             doNotit++;
           }
           
@@ -115,22 +113,21 @@ function makeComplex(list, maxLen = 5) {
                 //code
           if (oneOrtwo[pickRand] == "one" ) {
             //code
-            list[k] = makeAnd(list[k], list[pickLocate]);
+            start = makeAnd(start, list[pickLocate]);
           }else if (oneOrtwo[pickRand] == "two") {
             //code
-            list[k] = makeOr(list[k], list[pickLocate]);
+            start = makeOr(start, list[pickLocate]);
           }
           itter++;
         }
-  }
-        return list;
+        return start;
 }
 var statements = randomList(myStatments, myStatments.length);
 var stateArr = makeComplex(statements);
 var indexS = 0;
 var score= 0;
 scoreD.textContent = "Score : " + score;
-display.textContent = stateArr[0].statement;
+display.textContent = stateArr.statement;
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
     const key = e.target;
@@ -142,36 +139,25 @@ keys.addEventListener('click', e => {
       location.reload()
     }
     if (action === "true") {
-      if (stateArr[indexS].bool === true) {
+      if (stateArr.bool === true) {
         score += 5;
       }else{
         score -= 5;
       }
-      indexS++;
-       display.textContent = stateArr[indexS].statement;
-      if(indexS == stateArr.length-1){
-        indexS = 0;
         statements = randomList(myStatments, myStatments.length);
         stateArr = makeComplex(statements);
-
-      } 
+       display.textContent = stateArr.statement;
     }
     if (action === "false") {
-      if (stateArr[indexS].bool === false) {
+      if (stateArr.bool === false) {
         score+=5; 
       }
       else{
         score-=5;
       }
-      indexS++;
-       display.textContent = stateArr[indexS].statement;
-             if(indexS == stateArr.length-1){
-        indexS = 0;
         statements = randomList(myStatments, myStatments.length);
         stateArr = makeComplex(statements);
-
-      } 
-
+       display.textContent = stateArr.statement;
     }
     scoreD.textContent = "Score : " + score;
   }
