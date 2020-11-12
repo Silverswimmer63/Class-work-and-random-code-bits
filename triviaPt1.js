@@ -1,6 +1,6 @@
 /*
- Memphis: 
-Aidan doesn’t take physics but acts like he does: T  
+ Memphis:
+Aidan doesn’t take physics but acts like he does: T
 Global warming is a lie: F
 Bethesda made the biggest flop in gaming history:T
 PC isn’t master race: F
@@ -35,7 +35,7 @@ function randomList(lists, length) { //function name with designated perameter
   var itter = length;
   var list = [];
   for (var j = 0; j < itter; j ++ ) {
-           list.push(j);        
+           list.push(j);
   }
   var splicedstuff = [];
   var index = list.length;
@@ -51,7 +51,7 @@ function randomList(lists, length) { //function name with designated perameter
     var state = lists[newList[0]];
     splicedstuff.push(state);
   }
-  
+
 return splicedstuff;
 }
 
@@ -81,50 +81,51 @@ function makeNot(object) {
     statementNew.statement += "It is not the case that, " + object.statement;
     return statementNew;
 }
+
 function makeComplex(list, maxLen = 5) {
   var keep = [];
-            var doNotit = 0;
-            var startRand = Math.floor(Math.random()*list.length)
-        var start = list[startRand];
-        list.splice(startRand, 1);
-        var randMath = Math.floor(Math.random()*5);
-        if (randMath == 0) {
-            randMath+=1;
-        }
-                console.log(randMath)
-      var itter = 0;
-        while (itter < randMath) {
-          var oneFourthChance = [1,2,3,4];
-          var doNot = false;
-          for (var p = 0; p < 100; p++) {
-              var randMaths = Math.floor(Math.random()*4);
-            //code
-          }
-                  if (oneFourthChance[randMaths] == 4) {
-                      doNot = true;
-                  }else{
-                   doNot = false;
-                  }
-          if (doNot === true && doNotit == 0) {
-            start = makeNot(start);
-            doNotit++;
-          }
-          
-          var oneOrtwo = ["one", "two"];
-            var pickRand = Math.floor(Math.random()*2);
-            var pickLocate = Math.floor(Math.random()*list.length);
-            var useMe = list.splice(pickLocate,1);
-                //code
-          if (oneOrtwo[pickRand] == "one" ) {
-            start = makeOr(start, useMe[0]);
-          }else if (oneOrtwo[pickRand] == "two") {
-            //code
-            start = makeOr(start, useMe[0]);
-          }
-          itter++;
-        }
-        return start;
+  var doNotit = 0;
+  var startRand = Math.floor(Math.random()*list.length)
+  var start = list[startRand];
+  list.splice(startRand, 1);
+  var randMath = Math.floor(Math.random()*5);
+  if (randMath == 0) {
+    randMath+=1;
+  }
+  console.log(randMath)
+  var itter = 0;
+  while (itter < randMath) {
+    var oneFourthChance = [1,2,3,4];
+    var doNot = false;
+    for (var p = 0; p < 100; p++) {
+      var randMaths = Math.floor(Math.random()*4);
+      //code
+    }
+    if (oneFourthChance[randMaths] == 4) {
+      doNot = true;
+    }else{
+      doNot = false;
+    }
+    if (doNot === true && doNotit == 0) {
+      start = makeNot(start);
+      doNotit++;
+    }
+    var oneOrtwo = ["one", "two"];
+    var pickRand = Math.floor(Math.random()*2);
+    var pickLocate = Math.floor(Math.random()*list.length);
+    var useMe = list.splice(pickLocate,1);
+    //code
+    if (oneOrtwo[pickRand] == "one" ) {
+      start = makeOr(start, useMe[0]);
+    }else if (oneOrtwo[pickRand] == "two") {
+      //code
+      start = makeOr(start, useMe[0]);
+    }
+    itter++;
+    }
+    return start;
 }
+
 var statements = randomList(myStatments, myStatments.length);
 var stateArr = makeComplex(statements);
 var indexS = 0;
@@ -153,7 +154,7 @@ keys.addEventListener('click', e => {
     }
     if (action === "false") {
       if (stateArr.bool === false) {
-        score+=5; 
+        score+=5;
       }
       else{
         score-=5;
