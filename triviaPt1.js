@@ -82,9 +82,11 @@ function makeNot(object) {
     return statementNew;
 }
 function makeComplex(list, maxLen = 5) {
+  var keep = [];
             var doNotit = 0;
             var startRand = Math.floor(Math.random()*list.length)
         var start = list[startRand];
+        list.splice(startRand, 1);
         var randMath = Math.floor(Math.random()*5);
         if (randMath == 0) {
             randMath+=1;
@@ -111,13 +113,13 @@ function makeComplex(list, maxLen = 5) {
           var oneOrtwo = ["one", "two"];
             var pickRand = Math.floor(Math.random()*2);
             var pickLocate = Math.floor(Math.random()*list.length);
+            var useMe = list.splice(pickLocate,1);
                 //code
           if (oneOrtwo[pickRand] == "one" ) {
-            //code
-            start = makeAnd(start, list[pickLocate]);
+            start = makeOr(start, useMe[0]);
           }else if (oneOrtwo[pickRand] == "two") {
             //code
-            start = makeOr(start, list[pickLocate]);
+            start = makeOr(start, useMe[0]);
           }
           itter++;
         }
