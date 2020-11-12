@@ -10,6 +10,7 @@ Aidan is Extreme big brain:F
 Komoto best code editor:T
 Windows 10 is good:F
  Euan hates on Komoto because why not:T
+ i like pi
  */
 const keys = document.querySelector('.ultdiv');
 var checkedBox = 0.0;
