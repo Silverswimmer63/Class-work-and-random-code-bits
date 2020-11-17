@@ -166,3 +166,7 @@ keys.addEventListener('click', e => {
     scoreD.textContent = "Score : " + score;
   }
 })
+
+/*Add name
+Euan
+*/
