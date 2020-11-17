@@ -168,5 +168,5 @@ keys.addEventListener('click', e => {
 })
 
 /*Add name
-Euan
+Evan
 */
