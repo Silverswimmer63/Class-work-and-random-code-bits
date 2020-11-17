@@ -23,7 +23,7 @@ function randList(arr){
   return retIndex;
 }
 
-//Can Memphis find this comment
+//Can Memphis find this comment (:|) nope i can't
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
