@@ -1,0 +1,31 @@
+output	javascript (1).js	/^var output = "JavaScript Loading";$/;"	v
+randList	javascript (1).js	/^function randList(arr){$/;"	f
+styledOutput	javascript (1).js	/^var styledOutput = "";$/;"	v
+backwardsArray	javascript (1).js	/^function backwardsArray(array) {$/;"	f
+name	javascript (1).js	/^    var object = {name:array[0],age:array[1],year:array[2],major:array[3]};$/;"	p	class:arrayIntoClass.object
+arrayIntoClass	javascript (1).js	/^function arrayIntoClass(array) {$/;"	f
+changesIn	javascript (1).js	/^function changesIn(objOne, objTwo) {$/;"	f
+arrOne	oldStuf.js	/^var arrOne = [1,2,3,4,5];$/;"	v
+arrTwo	oldStuf.js	/^var arrTwo = ["I" + "desire" + "to" + "be" + "a" + "sentence."];$/;"	v
+strOne	oldStuf.js	/^var strOne = "I really wish I were an array";$/;"	v
+x	oldStuf.js	/^var startcoords = {x:5, y:5};$/;"	p	class:startcoords
+y	oldStuf.js	/^var startcoords = {x:5, y:5};$/;"	p	class:startcoords
+x	oldStuf.js	/^var endcoords = {x:0, y:7};$/;"	p	class:endcoords
+y	oldStuf.js	/^var endcoords = {x:0, y:7};$/;"	p	class:endcoords
+xchag	oldStuf.js	/^var xchag = Mat.abs(startcoords.x - endcoords.x);$/;"	v
+ychag	oldStuf.js	/^var ychag = Mat.abs(startcoords.y - endcoords.y);$/;"	v
+arr	oldStuf.js	/^var arr = [1, 2, 3, 4];$/;"	v
+studentInfo	oldStuf.js	/^var studentInfo = [];$/;"	v
+checkedBox	triviaPt1.js	/^var checkedBox = 0.0;$/;"	v
+dochandeler	triviaPt1.js	/^var dochandeler = document.getElementById("textbox");$/;"	v
+randomList	triviaPt1.js	/^function randomList(lists, length) { \/\/function name with designated perameter$/;"	f
+statement	triviaPt1.js	/^    var statementNew = {statement:first.statement + " and " + second.statement,bool:false};$/;"	p	class:makeAnd.statementNew
+makeAnd	triviaPt1.js	/^function makeAnd(first, second) {$/;"	f
+statement	triviaPt1.js	/^    var statementNew = {statement:first.statement + " or " + second.statement,bool:false};$/;"	p	class:makeOr.statementNew
+makeOr	triviaPt1.js	/^function makeOr(first, second) {$/;"	f
+statement	triviaPt1.js	/^    var statementNew = {statement:"",bool:!object.bool};$/;"	p	class:makeNot.statementNew
+bool	triviaPt1.js	/^    var statementNew = {statement:"",bool:!object.bool};$/;"	p	class:makeNot.statementNew
+makeNot	triviaPt1.js	/^function makeNot(object) {$/;"	f
+makeComplex	triviaPt1.js	/^function makeComplex(list, maxLen = 5) {$/;"	f
+indexS	triviaPt1.js	/^var indexS = 0;$/;"	v
+score	triviaPt1.js	/^var score= 0;$/;"	v
