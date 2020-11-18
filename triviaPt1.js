@@ -26,7 +26,7 @@ var myStatments = [{statement: "Aidan doesn't take physics but acts like he does
                    {statement: "PC isn't master race", bool: false},
                    {statement: "Aidan calls any sport with a ball in it sports ball", bool: true},
                    {statement: "Aidan is Extreme big brain", bool: false},
-                   {statement: "Komoto best code editor", bool: true},
+                   {statement: "Komoto best code editor", bool: false},
                    {statement: "Windows 10 is good", bool: true},
                    {statement: "Euan hates on Komoto because why not", bool: true},
                    {statement: "Aidan thinks PC isn't master race", bool: false}];
