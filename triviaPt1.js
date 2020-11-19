@@ -119,7 +119,7 @@ function makeComplex(list, maxLen = 5) {
       start = makeOr(start, useMe[0]);
     }else if (oneOrtwo[pickRand] == "two") {
       //code
-      start = makeOr(start, useMe[0]);
+      start = makeAnd(start, useMe[0]);
     }
     itter++;
     }
