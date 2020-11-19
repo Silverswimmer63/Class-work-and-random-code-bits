@@ -74,30 +74,52 @@ of letters. This function will try to emulate that experience.
 @return {str}: A string with no vowels
 */
 
-// declare your function here
-
-  // declare a return string here
-
-  // loop through the string and look for the letters AEIOU, you have to think about
-  // how to do this, or you will miss some vowels's
-
-    // Look up (and use) case, switch, and default (and break) to copy the functionality of makePasswordy
-
-  // return your return string
-
 //string = string.replaceAll("a","4");
 //return string;
+
+// declare your function here
 function casePasswordy(string) {
+  // declare a return string here
   var retStr = "";
+  // loop through the string and look for the letters AEIOU, you have to think about
+  // how to do this, or you will miss some vowels's
   for (var i = 0; i < string.length; i++) {
-    switch (string) {
+    // Look up (and use) case, switch, and default (and break) to copy the functionality of makePasswordy
+    switch (string[i]) {
       case "a":
         retStr += "4"
         break;
-
+      case "A":
+        retStr += "4"
+        break;
+      case "e":
+        retStr += "3";
+        break;
+      case "E":
+        retStr += "3";
+        break;
+      case "i":
+        retStr += "!";
+        break;
+      case "I":
+        retStr += "!";
+        break;
+      case "o":
+        retStr += "0";
+        break;
+      case "O":
+        retStr += "0";
+        break;
+      case "u":
+        retStr += "_";
+        break;
+      case "U":
+        retStr += "_";
+        break;
       default:
-        console.log("ass");
+        retStr += string[i];
     }
   }
+  // return your return string
   return retStr;
 }
